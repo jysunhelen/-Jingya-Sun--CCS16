@@ -1,3 +1,8 @@
+/**
+ * Kevin's comments: great use of beginShape() and endShape()
+ * consider turning your loop numbers 360 and 480 into variables- perhaps even 
+ * replacing them with width and height?
+ */
 function setup() {
   createCanvas(481,361);
 }
