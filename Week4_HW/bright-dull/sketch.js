@@ -1,5 +1,6 @@
 var colorFrom;
 var colorTo;
+//consider longer, more descriptive variable names
 var h1,h2,h3;
 var s1,s2,s3;
 var b1,b2,b3;
@@ -7,6 +8,8 @@ var rectStep = 1;
 
 function setup() {
   createCanvas(400,400);
+  //since these are global variables anyway, you might as well assign these values outside of
+  //the setup function
     h1 = 60, s1 = 30, b1 = 100;
     h2 = 60, s2 = 100, b2 = 100;
     h3 = 0, s3 = 0, b3 = 100;
@@ -39,6 +42,10 @@ function draw() {
 }
 
 function keyPressed(){
+  //I like what you're going for, but I think you should change the color with the color() function,
+  //rather than storing each individual hsb and changing them directly.  In the current configuration, a reader
+  //of your code doesn't really see the relationship between colors.  Instead the reader only sees individual numbers.
+  //Perhaps consider storing your colors in an array like we did in class.
   if(key === '1'){
     h1 = 60, s1 = 10, b1 = 100;
     h2 = 60, s2 = 100, b2 = 100;
